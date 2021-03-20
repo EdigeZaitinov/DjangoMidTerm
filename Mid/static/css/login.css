@@ -1,0 +1,16 @@
+#body {
+    background-color: palevioletred;
+}
+
+#loginBody {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: start;
+    border-radius: 2rem;
+    width: 50rem;
+    margin-top: 5rem;
+    margin-left: 15rem;
+    padding: 2rem;
+}
