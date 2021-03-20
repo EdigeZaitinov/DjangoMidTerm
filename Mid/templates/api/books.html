@@ -1,0 +1,46 @@
+<!DOCTYPE html> {% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{% static 'css/books.css' %}" />
+    <title>Hello Django</title>
+</head>
+
+<body id="body">
+    <div id="todoBody">
+        <div id="listNameBackground">
+            <h1 id="listName">Book list</h1>
+        </div>
+        <div id="listBody">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                        <th>Created_at</th>
+                        <th>Num_pages</th>
+                        <th>Janre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for book in books %}
+                    <tr>
+                        <td>{{book.name}}</td>
+                        <td>{{book.price}}</td>
+                        <td>{{book.description}}</td>
+                        <td>{{book.created_at}}</td>
+                        <td>{{book.num_pages}}</td>
+                        <td>{{book.janre}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

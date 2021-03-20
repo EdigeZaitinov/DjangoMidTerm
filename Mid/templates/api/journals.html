@@ -1,0 +1,46 @@
+<!DOCTYPE html> {% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{% static 'css/journals.css' %}" />
+    <title>Hello Django</title>
+</head>
+
+<body id="body">
+    <div id="todoBody">
+        <div id="listNameBackground">
+            <h1 id="listName">Journal list</h1>
+        </div>
+        <div id="listBody">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                        <th>Created_at</th>
+                        <th>Type</th>
+                        <th>Publisher</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for journal in journals %}
+                    <tr>
+                        <td>{{journal.name}}</td>
+                        <td>{{journal.price}}</td>
+                        <td>{{journal.description}}</td>
+                        <td>{{journal.created_at}}</td>
+                        <td>{{journal.type}}</td>
+                        <td>{{journal.publisher}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
